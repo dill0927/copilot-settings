@@ -36,6 +36,13 @@ copilot-settings/
 │   └── skills/                    # SKILL.md フォルダ — 自己完結型スキル
 │       └── code-review/
 │           └── SKILL.md
+└── templates/                     # プロジェクト固有 .github/ のテンプレート
+    └── .github/
+        ├── copilot-instructions.md    # 使用技術・ルール記入欄つきテンプレート
+        ├── prompts/
+        │   └── write-tests.prompt.md  # テストフレームワーク記入欄つきテンプレート
+        └── instructions/
+            └── general.instructions.md  # 命名規則・フォーマット記入欄つきテンプレート
 ```
 
 ## 使い方
@@ -71,6 +78,15 @@ GitHub.com 上の Copilot にも反映されるため、チーム共通のルー
 # プロジェクト共通指示
 - 日本語で回答する
 - シンプルで読みやすいコードを優先する
+```
+
+### templates/ — プロジェクト固有テンプレート
+
+新しいプロジェクトに `.github/` を導入する際のテンプレート一式。
+`<!--` コメントで記入欄を示しているので、プロジェクトに合わせて書き換えてコピーする。
+
+```
+cp -r templates/.github /path/to/your-project/
 ```
 
 ### .vscode/mcp.json — MCP サーバー設定
